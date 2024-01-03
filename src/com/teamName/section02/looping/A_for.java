@@ -89,4 +89,54 @@ public class A_for
         }
         System.out.println("1부터 " + random + "까지의 합계 : " + sum);
     }
+
+    public static void testForExample4()
+    {
+        //숫자 2개를 입력 받아 작은 수에서 큰 수까지의 합계를 구하시오
+        //단, 두 숫자는 같은 숫자를 입력하지 않는다는 가정으로 해결한다.
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("첫 번째 정수 입력 :");
+        int first = sc.nextInt();
+        System.out.print("두 번째 정수 입력 :");
+        int second = sc.nextInt();
+
+        if (first == second)
+        {
+            System.out.println("경고! 두 정수의 값이 같음");
+            System.exit(0);
+        }
+
+        int min, max, sum = 0;
+        min = Math.min(first, second);
+        max = Math.max(first, second);
+
+        for (int i = min; i <= max; i++)
+        {
+            sum += i;
+        }
+        System.out.println(min + "부터 " + max + "까지의 합은 " + sum + "입니다.");
+    }
+    public static void printSimpleGugudan(){
+        //구구단은 곱하는 수가 1부터 시작하여 9까지 증가하며 곱하는 규칙을 가지고 있다.
+
+        //2~9 사이의 수를 입력받아 구구단을 출력하고 해당 범위의 수를 입력하지 않으면
+        //반드시 2~9사이의 양수를 입력해야 합니다.를 출력한다.
+
+        System.out.println("2~9사이의 수를 입력하라.");
+        Scanner sc = new Scanner(System.in);
+        int dan = sc.nextInt();
+
+        if(dan<2 || dan>9){
+            System.out.println("반드시 2~9사이의 양수를 입력해야 합니다.");
+            System.exit(0);
+        }
+        else {
+            System.out.println("<<<<<"+dan+"단>>>>>");
+            for(int i = 1 ; i<10;i++){
+                System.out.println(dan + " X " + i + " = " + (dan*i));
+            }
+            System.out.println(dan+"단 끝.");
+        }
+    }
 }
