@@ -32,4 +32,26 @@ public class A_nestedFor
             System.out.println("");
         }
     }
+
+    public static void printTriangleStars(){
+        // 키보드로 정수를 하나 입력받아 해당 정수만큼 한 횡에 '*'을 행의 번호개씩 출력
+        /*
+        ex) 5
+        *
+        **
+        ***
+        ****
+        *****              */
+
+        System.out.print("하나의 정수를 입력 : ");
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+
+        for(int i =1; i<=row;i++){
+            for(int j=0;j<i;j++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
 }
